@@ -387,18 +387,7 @@ BigInt sqrt(BigInt & a){
 	return v;
 }
 
-BigInt NthCatalan(int n){
-	BigInt a(1),b;
-	for (int i = 2; i <= n;i++)
-		a *= i;
-	b = a;
-	for (int i = n + 1; i <= 2 * n;i++)
-		b *= i;
-	a *= a;
-	a *= (n + 1);
-	b /= a;
-	return b;
-}
+
 
 BigInt NthFibonacci(int n){
 	BigInt a(1), b(1), c;
@@ -490,14 +479,7 @@ int main()
 		Fib = NthFibonacci(i);
 		cout << "Fibonacci " << i << " = " << Fib<<'\n';
 	}
-	cout << "-------------------------Catalan"
-		<< "------------------------------\n";
-	for (int i = 0; i <= 10; i++) {
-		BigInt Cat;
-		Cat = NthCatalan(i);
-		cout << "Catalan " << i << " = " << Cat<<'\n';
-	}
-
+	
 	// Calculating factorial of from 1 to 10
 	cout << "-------------------------Factorial"
 		<< "------------------------------\n";
